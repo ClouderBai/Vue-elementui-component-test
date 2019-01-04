@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <HelloWorld />
-    <el-button size="mini" type="primary">aaaaa</el-button>
-    <el-tree :data="[]"></el-tree>
+    <el-button size="mini" type="primary">button</el-button><br>
+    <el-tag>tree</el-tag>
+    <el-tree :data="[{label: '1-1'}]" highlight-current=""></el-tree>
   </div>
 </template>
 
