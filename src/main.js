@@ -15,3 +15,27 @@ new Vue({
   components: { App },
   template: "<App/>"
 });
+
+function demo(a) {
+  console.log("a", a);
+  return function(target, key, description) {
+    // target.prototype["log"] = function(value) {
+    //   console.log(value);
+    // };
+    console.log(target, key, description);
+  };
+}
+
+// @demo("aaabbbbb")
+class TestClass {
+  @demo("aaabbbbb")
+  _id;
+
+  @demo("cccccc")
+  test(p) {
+    this.log(p);
+  }
+}
+
+const foo = new TestClass();
+// foo.test("ccccccalfkjalskjfaslkfjalks;fj");
